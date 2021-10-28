@@ -92,7 +92,7 @@ def edit_trip(trip_id):
         flash("Please register or login!")
         return redirect("/")
     data = {
-        "trip_id": trip_id
+        "trip_id": trip_id,
     }
     trip = Trip.get_trip_with_traveller(data)
     return render_template("edit_trip.html", trip=trip)
